@@ -1,10 +1,23 @@
 ## 2022년도 1학기 연세대학교 AI 기반 신약개발
 
-You can use the [editor on GitHub](https://github.com/sungkenh/github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+관련 사이트:
+연세대학교 제약산합협동과정
+연세대학교 온라인강의
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 강의 설명
 
-### Markdown
+신약개발 분야는 인간의 복잡한 생물학적 반응과 약물에 대한 다양한 정보 측정이 필요해 많은 양의 데이터가 축적되어 있다. 따라서, 신약개발 분야에 데이터를 기반으로 하는 인공지능의 도입이 가능하다고 연구자들이 판단했다. 이에 따라 인공지능 신약개발 연구가 활발히 진행되었고, 이를 활용한 실제 신약개발 사례가 등장하면서 신약개발 인공지능 분야가 폭발적으로 성장하게 되었다.
+
+ 본 수업에서는 신약개발에 인공지능 기술 적용 방법을 습득하기 위하여 기초 프로그래밍 지식부터 신약개발에 필요한 데이터를 다루는 방법을 배우고, Drug repositioning과 re-purpose에 주로 활용되는 DTI 모델을 연구에 활용할 수 있도록 한다.
+ 
+### 강의 계획
+
+|제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
