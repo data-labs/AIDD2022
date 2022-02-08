@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Spring 2021 6.874 Computational Systems Biology: Deep Learning in the Life Sciences</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Course materials and notes for MIT class 6.802 / 6.874 / 20.390 / 20.490 / HST.506 Computational Systems Biology: Deep Learning in the Life Sciences">
+  <link rel="canonical" href="https://mit6874.github.io/">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  
+  <!-- Google fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+  <!-- mathjax -->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script> -->
+
+  <!-- Google tracking -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46895817-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="wrap title-wrap">
+    <h1><a class="site-title" href="/">Spring 2021 6.874 Computational Systems Biology: Deep Learning in the Life Sciences</a></h1>
+  </div>
+</header>
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="home">
+  <div class="materials-wrap">
+    <p>Additional course websites:</p>
+    <ul>
+        <li><a href="https://canvas.mit.edu/courses/7499">MIT Canvas</a></li>
+        <li><a href="https://piazza.com/class/kl6p26a03ux19u?cid=28">Piazza</a> (discussion forum)</li>
+    </ul>
+
+    <h2 class="module-header">Course description</h2>
+    <p>This courses introduces foundations and state-of-the-art machine learning challenges in genomics and the life sciences more broadly. We introduce both deep learning and classical machine learning approaches to key problems, comparing and contrasting their power and limitations. We seek to enable students to evaluate a wide variety of solutions to key problems we face in this rapidly developing field, and to execute on new enabling solutions that can have large impact. As part of the subject students will implement solutions to challenging problems, first in problem sets that span a carefully chosen set of tasks, and then in an independent project. Students will program using Python 3 and TensorFlow 2 in Jupyter Notebooks, a nod to the importance of carefully documenting your work so it can be precisely reproduced by others.</p>
+
+	<h2 class="module-header">Syllabus and schedule</h2>
+    <table class="table">
+        <tr class="active">
+            <th>&nbsp;</th><th>When&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Where&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Description</th><th>Course materials</th><th>Reference</th>
+        </tr>
+        <tr>
+            <td>Lecture 1</td>
+            <td>Feb 16 1pm</td>
+            <td>Course Intro + Overview Foundations</td>
+            <td>
+                <ul>
+                    <li>Read <a href="http://www.deeplearningbook.org/">Goodfellow</a> Chapter 1</li>
+                    <li><a href="assets/sp2021/slides/l01.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=0jWOZoTsYzI">Lecture video</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="https://arxiv.org/pdf/1603.06430.pdf">DL in Bioinformatics</a></li>
+                    <li><a href="http://msb.embopress.org/content/msb/12/7/878.full.pdf">DL for computational biology</a></li>
+                    <li><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000809">The Roots of Bioinformatics</a></li>
+                    <li><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&arnumber=7347331">ML in Genomic Medicine</a></li>
+                    <li><a href="https://github.com/gokceneraslan/awesome-deepbio">Awesome DeepBio</a></li>
+                    <li><a href="http://colah.github.io/posts/2015-09-Visual-Information/">Visual Information Theory</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Lecture 2</td>
+            <td>Feb 18 1pm</td>
+            <td>ML Foundations</td>
+            <td>
+                <ul>
+                    <li>Read <a href="http://www.deeplearningbook.org/">Goodfellow</a> Chapter 6</li>
+                    <li><a href="assets/slides/FeedForwardBackprop.pdf">Feed Forward Backprop</a></li>
+                    <li><a href="assets/sp2021/slides/l02.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=QyFrYUCXbgI">Lecture video</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="https://github.com/aymericdamien/TensorFlow-Examples">Damien</a></li>
+                    <li><a href="http://nicklocascio.com/tensorflow-crash-course">Nick Locascio</a></li>
+                    <li><a href="https://www.tensorflow.org/tutorials">TF site tutorials</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Recitation 1</td>
+            <td>Feb 19 3pm</td>
+            <td>ML Review</td>
+            <td>
+		        <ul>
+                    <li><a href="assets/sp2021/recitations/r01.pdf">Recitation slides</a></li>
+                </ul>
+	        </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 3</td>
+            <td>Feb 23 1pm</td>
+            <td>Convolutional Neural Networks</td>
+            <td>
+                <ul>
+                    <li>Read <a href="http://www.deeplearningbook.org/">Goodfellow</a> Chapter 9</li>
+                    <li><a href="assets/sp2021/slides/l03.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=r5nXYc2wYvI&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=4">Lecture video</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 4</td>
+            <td>Feb 25 1pm</td>
+            <td>Recurrent Neural Networks, Graph Neural Networks</td>
+            <td>
+                <ul>
+                    <li>Read <a href="http://www.deeplearningbook.org/">Goodfellow</a> Chapter 10</li>
+                    <li><a href="assets/sp2021/slides/l04.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=tpeqHeqpmT0&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=5">Lecture video</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 2</td>
+            <td>Feb 26 3pm</td>
+            <td>Neural Networks Review</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r02.pdf">Recitation notes</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 5</td>
+            <td>Mar 2 1pm</td>
+            <td>Interpretability, Dimensionality Reduction</td>
+            <td>
+            	<ul>
+                    <li><a href="assets/sp2021/slides/l05.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=5fIy19GXAxI&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=6">Lecture video</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul style="font-size: smaller">
+                    <li><a href="assets/misc/binder.pdf">Binder et al. (Relevance Propagation)</a></li>
+                    <li><a href="assets/misc/dumoulin.pdf">Dumoulin and Visin (Convolution Arithmetic)</a></li>
+                    <li><a href="assets/misc/finnegan.pdf">Finnegan and Song (Maximum entropy methods)</a></li>
+                    <li><a href="assets/misc/lundberg.pdf">Lundberg and Lee (SHAP)</a></li>
+                    <li><a href="assets/misc/ribeiro.pdf">Ribeiro (LIME)</a></li>
+                    <li><a href="assets/misc/selvaraju.pdf">Selvaraju et al. (Grad-CAM)</a></li>
+                    <li><a href="assets/misc/shrikumar.pdf">Shrikumar et al. (Learning Important Features)</a></li>
+                    <li><a href="assets/misc/shrikumar-2.pdf">Shrikumar et al. (DeepLIFT)</a></li>
+                    <li><a href="assets/misc/simonyan.pdf">Simonyan et al. (Saliency Maps)</a></li>
+                    <li><a href="assets/misc/springenberg.pdf">Springenberg et al. (CNN)</a></li>
+                    <li><a href="assets/misc/sundararajan.pdf">Sundararajan et al. (Axiomatic Attribution)</a></li>
+                    <li><a href="assets/misc/yosinski.pdf">Yosinski et al. (Deep Visualization)</a></li>
+                    <li><a href="assets/misc/zeiler.pdf">Zeiler et al. (Deconvolutional Networks)</a></li>
+                    <li><a href="assets/misc/zeiler-2.pdf">Zeiler and Fergus (Understanding Convolutional Networks)</a></li>
+                    <li><a href="assets/misc/zhou.pdf">Zhou et al. (Discriminative Localization)</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Lecture 6</td>
+            <td>Mar 4 1pm</td>
+            <td>Generative Models, GANs, VAE</td>
+            <td>
+            	<ul>
+                    <li><a href="assets/sp2021/slides/l06.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=XEN5VfFScSg&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=7">Lecture video</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 3</td>
+            <td>Mar 5 3pm</td>
+            <td>Interpreting ML Models</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r03.pdf">Recitation slides</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="info">
+            <td>No class</td>
+            <td>Mar 9</td>
+            <td></td>
+            <td>Monday Class Schedule</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>Mar 10 11:59pm</td>
+            <td></td>
+            <td>PS1 due</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 7</td>
+            <td>Mar 11 1pm</td>
+            <td>DNA Accessibility, Promoters and Enhancers</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l07.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=5usrA2yWQjw">Lecture video</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 4</td>
+            <td>Mar 12 3pm</td>
+            <td>Chromatin and gene regulation</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r04.pdf">Recitation slides</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 8</td>
+            <td>Mar 16 1pm</td>
+            <td>Transcription Factors, DNA methylation</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l08.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=iHOgKx1mqEw&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=8">Lecture video</a></li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 9</td>
+            <td>Mar 18 1pm</td>
+            <td>Gene Expression, Splicing</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l09.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=6ArtsTQ0eiM">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 5</td>
+            <td>Mar 19 3pm</td>
+            <td>RNA-seq, Splicing</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r05.pdf">Recitation slides</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="info">
+            <td>No class</td>
+            <td>Mar 23</td>
+            <td></td>
+            <td>Class Holiday</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 10</td>
+            <td>Mar 25 1pm</td>
+            <td>Single cell RNA-sequencing</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l10.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=NNOkdgE4jNM">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 6</td>
+            <td>Mar 26 3pm</td>
+            <td>scRNA-seq, dimensionality reduction</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r06.pdf">Recitation slides</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 11</td>
+            <td>Mar 30 1pm</td>
+            <td>Dimensionality Reduction, Genetics, and Variation</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l11a.pdf">Lecture slides A</a></li>
+                    <li><a href="assets/sp2021/slides/l11b.pdf">Lecture slides B</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=0byf2OF6AT0">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 12</td>
+            <td>Apr 1 1pm</td>
+            <td>GWAS and Rare variants</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l12.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=j3l1RpBimjU&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=12">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>Apr 1 11:59pm</td>
+            <td></td>
+            <td>PS2 due</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 7</td>
+            <td>Apr 2 3pm</td>
+            <td>Genetics</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r07a.pdf">Recitation slides A</a></li>
+                    <li><a href="assets/sp2021/recitations/r07b.pdf">Recitation slides B</a></li>
+                </ul></td>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 13</td>
+            <td>Apr 6 1pm</td>
+            <td>eQTLs</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l13.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=8tfTSLvQvsw&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=13">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 14</td>
+            <td>Apr 8 1pm</td>
+            <td>Electronic health records and patient data</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l14.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=r-c6uJcsCdg&list=PLypiXJdtIca5sxV7aE3-PS9fYX3vUdIOX&index=14">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 8</td>
+            <td>Apr 9 3pm</td>
+            <td>ML for health data</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r08.pdf">Recitation slides</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 15</td>
+            <td>Apr 13 1pm</td>
+            <td>Graph analysis</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l15a.pdf">Lecture slides Part A</a></li>
+                    <li><a href="assets/sp2021/slides/l15b.pdf">Lecture slides Part B</a></li>
+                   <li><a href="https://www.youtube.com/watch?v=mv2Df-_p7EQ">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 16</td>
+            <td>Apr 15 1pm</td>
+            <td>Drug discovery</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l16.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=AHVJv5RNqKs">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 9</td>
+            <td>Apr 16 3pm</td>
+            <td>Protein structure prediction</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r09.pdf">Recitation slides</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="info">
+            <td>No class</td>
+            <td>Apr 20</td>
+            <td></td>
+            <td>Class Holiday</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 17</td>
+            <td>Apr 22 1pm</td>
+            <td>Protein folding</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l17a.pdf">Lecture slides Part A</a></li>
+                    <li><a href="assets/sp2021/slides/l17b.pdf">Lecture slides Part B</a></li>
+                    <li><a href="assets/sp2021/slides/l17c.pdf">Lecture slides Part C</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=1YHsSFWn5OA">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>Apr 23 11:59pm</td>
+            <td></td>
+            <td>PS3 due</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 10</td>
+            <td>Apr 23 3pm</td>
+            <td>Exam prep session<td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r10.pdf">Recitation slides</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Exam</td>
+            <td>Apr 27 11:59pm</td>
+            <td></td>
+            <td>In-class exam</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 19</td>
+            <td>Apr 29 1pm</td>
+            <td>No lecture</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>Apr 29 11:59pm</td>
+            <td></td>
+            <td>PS4 due</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 11</td>
+            <td>Apr 30 3pm</td>
+            <td>Structural biology and protein folding</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/recitations/r11.pdf">Recitation slides</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 20</td>
+            <td>May 4 1pm</td>
+            <td>Imaging applications in healthcare</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l20a.pdf">Lecture slides Part A</a></li>
+                    <li><a href="assets/sp2021/slides/l20b.pdf">Lecture slides Part B</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dhMm5uGLzG4">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 21</td>
+            <td>May 6 1pm</td>
+            <td>Video processing, structure determination</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l21.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=MVDUnbVXMGM">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="info">
+            <td>No class</td>
+            <td>May 7</td>
+            <td></td>
+            <td>Class Holiday</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 22</td>
+            <td>May 11 1pm</td>
+            <td>Imaging and Cancer</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l22a.pdf">Lecture slides Part A</a></li>
+                    <li><a href="assets/sp2021/slides/l22b.pdf">Lecture slides Part B</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=c4dvyTBvysQ">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 23</td>
+            <td>May 13 1pm</td>
+            <td>EHRs and data mining</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l23a.pdf">Lecture slides</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=KKX589Jt2bA">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recitation 12</td>
+            <td>May 14 3pm</td>
+            <td>How to present</td>
+            <td><ul>
+                <li><a href="https://www.youtube.com/watch?v=KzyvIBjBkuc">Recitation video</a></li>
+            </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>May 17 11:59pm</td>
+            <td></td>
+            <td>Final project reports due</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lecture 24</td>
+            <td>May 18 1pm</td>
+            <td>Neuroscience</td>
+            <td><ul>
+                    <li><a href="assets/sp2021/slides/l24a.pdf">Lecture slides Part A</a></li>
+                    <li><a href="assets/sp2021/slides/l24b.pdf">Lecture slides Part B</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Jj9BbKhZSYM">Lecture video</a></li>
+                </ul></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>May 19 11:59pm</td>
+            <td></td>
+            <td>Final presentations due</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="warning">
+            <td>Deadline</td>
+            <td>May 20</td>
+            <td></td>
+            <td>In-class final presentations</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        
+    </table>
+
+    <h2 class="module-header">Tutorials for TensorFlow, NumPy, Google Cloud, and Jupyter notebooks</h2>
+    <p>We collected a series of pointers to tutorials on NumPy, TensorFlow, Google Cloud and Conda <a href="tutorials/main/">here</a>. We also provide a <a href="tutorials/quickstart/">Quickstart tutorial</a> to set up essential environment and tools for you to work on problem set 0 and problem set 1.</p>
+  
+    <h2 class="module-header">Prerequisites</h2>
+	<p>You should be comfortable with calculus, linear algebra, (Python) programming, probability, and introductory molecular biology. This will be a fast paced course, and it is targeted towards students that are both mathematically and computational capable. There are many other subjects at MIT that teach overviews of computational biology that are less demanding, we would be happy to recommend other options if you find this subject is not what you desire.</p>
+    
+    <h2 class="module-header">Class meeting times</h2>
+    <ul>
+        <li>Lecture: TR1-2.30</li>
+        <li>Recitation: F3-4</li>
+        <li>Mentoring Session: F4-5</li>
+    </ul>
+
+    <h2 class="module-header">Contact</h2>
+    <p>You should feel free to contact the lecturer and the TAs about any questions through <a href="mailto:6.874staff@mit.edu">6.874staff@mit.edu</a>. The best way to get detailed questions answered is to attend TA office hours and recitation or post them on <a target="_blank" href="https://piazza.com/class/kl6p26a03ux19u?cid=28">Piazza</a>.</p>
+
+    <h2 class="module-header">Office hours</h2>
+    <div class="materials-item">
+        Manolis Kellis (manoli@mit.edu): M 5-6pm
+    </div>
+    <div class="materials-item">
+        Zheng Dai, Dylan Cable: Tues 4-5pm
+    </div>
+    <div class="materials-item">
+        Jackie Valeri, Tessa Gustafson: Wed 7-8pm
+    </div>
+
+    <h2 class="module-header">Grading</h2>
+    <p>Grading will be based upon five programming-intensive problem sets (30%), a quiz (25%), a  project (35%), and participation plus one day of lecture scribing (10%). Attendance in lecture is important as the class moves quickly and you will need to be present. For students enrolled in one of the graduate versions of this class (6.874, 20.490, and HST.506) there will be an extra section on some problem sets. You can use three late days for problem set deadlines (or email the course staff).</p>
+
+    <h2 class="module-header">Lecture Scribing</h2>
+    <p>If you are enrolled in this course for credit, you are requiured to scribe for one lecture.
+    <p>The requirements for lecture scribing are as follows:</p>
+    
+    <ol>
+      <li>On the day of lecture you may take notes however you like. Lectures will be recorded, so asynchronous participation is fine.</li>
+
+      <li>
+	During the week after lecture, we ask that you work with everyone assigned to scribe your lecture to compile a finalized set of notes that summarize the key points of the lecture, explain important equations, images and plots, illustrate or describe relevant things that were written on the board, and describe any important questions & answers between student and professor that were exchanged. <br>
+	The end goal is for you to generate a compact resource which you and your classmates can use to glean the important material from your lecture. The finalized notes should generally adhere to and extend from the structure outlined by the headings at the beginning of the notes template.
+     </li>
+     <li>
+        The notes template and finished scribed notes may be found <a href="https://www.dropbox.com/work/6874_Spring21/8.Scribing">here</a>.</li>
+    <li>Let the course staff know you are finished compiling the notes by sending an email to <a href="mailto:6.874staff@mit.edu?Subject=Lecture%20Scribing" target="_top">6.874staff@mit.edu</a>. The deadline for completing the notes will be end-of-day one week after your lecture (e.g. notes from a lecture on 2/18 will be due on 2/25 @ 11:59 PM).</li>
+    </ol>
+
+    <h2 class="module-header">Project</h2>
+    <!-- TODO: link to project details A detailed project description can be found <a target="_blank" href="assets/final-project-2019.pdf">here</a>. -->
+    <p>This subject has a substantial project component. We strongly recommend working on projects in team of 2-3 students, but if there’s a strong justification, we can consider exceptions. You are free to choose any problem in the life sciences related to the lectures of the course, and develop a deep learning solution using the subject’s methodologies or cloud resources. We will have extensive mentoring resources for the students to help provide guidance, access to datasets, and biological insights. We will hold mentoring sessions during which you will have a chance to refine your ideas in consultation with the teaching staff and research mentors for each research area.</p>
+
+    <h2 class="module-header">Textbook</h2>
+    <p>We will be using the book “Deep Learning” by Goodfellow, Bengio, and Courville. You can find the book online <a target="_blank" href="http://deeplearningbook.org">here</a> and <a target="_blank" href="https://github.com/janishar/mit-deep-learning-book-pdf">here</a>. You can purchase a hard copy at <a target="_blank" href="https://mitpress.mit.edu/books/deep-learning">MIT Press</a> or on Amazon.</p>
+    <p>Another useful book is the <a href="assets/matrix-cookbook.pdf">Matrix Cookbook</a>, an extensive collection of facts about matrices.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  MIT - 6.802 / 6.874 / 20.390 / 20.490 / HST.506 Computational Systems Biology: Deep Learning in the Life Sciences - Spring 2019
+</footer>
+
+  </body>
+</html>
