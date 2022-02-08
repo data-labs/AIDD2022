@@ -16,6 +16,7 @@
 ### 강의 계획
 
 |강의|날짜|주제|참고링크|참고하면 좋은 자료|Reference|
+|----|---|----|-------|-----------------|---------|
 |Lecture 1|2022-03-05|신약개발에서의 인공지능과 python 기초 문법|Lecture Slides, Lecture Codes|DL in Bioinformatics(https://arxiv.org/pdf/1603.06430.pdf)|---------|
 |Lecture 1|2022-03-05|신약개발에서의 인공지능과 python 기초 문법|Lecture Slides, Lecture Codes|DL in Bioinformatics(https://arxiv.org/pdf/1603.06430.pdf)|---------|
 
