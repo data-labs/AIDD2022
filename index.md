@@ -16,35 +16,7 @@
 ### 강의 계획
 
 |강의|날짜|주제|참고링크|참고하면 좋은 자료|Reference|
-|----|---|---|--------|-----------------|---------|
+|Lecture 1|2022-03-05|신약개발에서의 인공지능과 python 기초 문법|Lecture Slides, Lecture Codes|DL in Bioinformatics(https://arxiv.org/pdf/1603.06430.pdf)|---------|
+|Lecture 1|2022-03-05|신약개발에서의 인공지능과 python 기초 문법|Lecture Slides, Lecture Codes|DL in Bioinformatics(https://arxiv.org/pdf/1603.06430.pdf)|---------|
 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sungkenh/github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
